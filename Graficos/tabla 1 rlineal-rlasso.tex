@@ -1,0 +1,99 @@
+\documentclass{article}
+\usepackage{booktabs}        % Para líneas horizontales profesionales en tablas
+\usepackage{threeparttable}  % Para añadir notas al pie en tablas
+\usepackage{geometry}        % Para ajustar los márgenes
+\geometry{margin=1in}        % Establece márgenes de 1 pulgada
+
+\begin{document}
+
+% Primera tabla
+\begin{table}[h!]
+\centering
+\caption{Resultados de Regresión: \textit {Top 10 RLasso comparadas con RLineal}}
+\begin{threeparttable}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+ & \multicolumn{2}{c}{\textit{Variable Dependiente: pay\_original}} \\
+\cmidrule(lr){2-3}
+ & \textbf{Regresión Lineal} & \textbf{Regresión Lasso} \\
+\midrule
+\textbf{crew\_E4} & 7918.487\textsuperscript{***} & 6846.820\textsuperscript{***} \\
+ & (1211.405) & (1066.359) \\
+\textbf{payload\_des} & 5947.532\textsuperscript{***} & 6360.313\textsuperscript{***} \\
+ & (613.320) & (586.871) \\
+\textbf{crew\_E2} & 5245.118\textsuperscript{***} & 4304.040\textsuperscript{***} \\
+ & (1244.868) & (1085.665) \\
+\textbf{day\_11} & 6853.010\textsuperscript{**} & 3880.455\textsuperscript{**} \\
+ & (2750.515) & (1918.947) \\
+\textbf{day\_30} & 5417.260\textsuperscript{*} & 3825.800\textsuperscript{*} \\
+ & (2835.072) & (2032.884) \\
+\textbf{distance} & 12967.248\textsuperscript{***} & 3109.392\textsuperscript{***} \\
+ & (3396.119) & (642.527) \\
+\textbf{distance\_up\_level} & -6139.980\textsuperscript{*} & 3010.799\textsuperscript{***} \\
+ & (3157.070) & (761.603) \\
+\textbf{day\_10} & 5250.386\textsuperscript{*} & 3003.415 \\
+ & (2761.003) & (1930.380) \\
+\textbf{day\_23} & 4446.978\textsuperscript{*} & 2824.128 \\
+ & (2672.722) & (1818.751) \\
+\textbf{day\_8} & 4700.482\textsuperscript{*} & 2633.525 \\
+ & (2702.307) & (1855.428) \\
+\midrule
+\textbf{Observaciones} & 1173 & 1173 \\
+$R^{2}$ & 0.696 & 0.687 \\
+$R^{2}$ Ajustado & 0.673 & 0.673 \\
+Error Estándar Residual & 11337.073 (df = 1089) & 11334.064 (df = 1123) \\
+Estadístico F & 30.075\textsuperscript{***} (df = 83; 1089) & 50.288\textsuperscript{***} (df = 49; 1123) \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Nota:} \textsuperscript{*}$p<0.1$; \textsuperscript{**}$p<0.05$; \textsuperscript{***}$p<0.01$
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% Segunda tabla
+\begin{table}[h!]
+\centering
+\caption{Resultados de Regresión : \textit {Bottom 10 RLasso comparadas con RLineal}}
+\begin{threeparttable}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+ & \multicolumn{2}{c}{\textit{Variable Dependiente: pay\_original}} \\
+\cmidrule(lr){2-3}
+ & \textbf{Regresión Lineal} & \textbf{Regresión Lasso} \\
+\midrule
+\textbf{CAT 797-F\_des} & 32847.091 & -2991.406 \\
+ & (20613.491) & (2083.164) \\
+\textbf{day\_2} & -444.673 & -3008.505 \\
+ & (2839.489) & (2053.403) \\
+\textbf{expected\_time\_des} & -2467.743\textsuperscript{**} & -3053.158\textsuperscript{***} \\
+ & (1051.949) & (677.831) \\
+\textbf{year\_2024} & -26254.988\textsuperscript{***} & -3073.255 \\
+ & (8411.560) & (2048.584) \\
+\textbf{month\_6} & -17001.451\textsuperscript{***} & -3195.677\textsuperscript{*} \\
+ & (4483.370) & (1676.872) \\
+\textbf{day\_4} & -1006.857 & -3493.722\textsuperscript{*} \\
+ & (2720.368) & (1882.310) \\
+\textbf{day\_6} & -1993.648 & -3880.896\textsuperscript{*} \\
+ & (2842.389) & (2044.286) \\
+\textbf{month\_7} & -17741.765\textsuperscript{***} & -4074.416\textsuperscript{**} \\
+ & (4599.363) & (1758.520) \\
+\textbf{day\_14} & -1458.037 & -4285.375\textsuperscript{**} \\
+ & (2748.087) & (1913.182) \\
+\textbf{month\_3} & -10319.592\textsuperscript{***} & -5044.139\textsuperscript{***} \\
+ & (2357.589) & (1596.659) \\
+\midrule
+\textbf{Observaciones} & 1173 & 1173 \\
+$R^{2}$ & 0.696 & 0.687 \\
+$R^{2}$ Ajustado & 0.673 & 0.673 \\
+Error Estándar Residual & 11337.073 (df = 1089) & 11334.064 (df = 1123) \\
+Estadístico F & 30.075\textsuperscript{***} (df = 83; 1089) & 50.288\textsuperscript{***} (df = 49; 1123) \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item \textit{Nota:} \textsuperscript{*}$p<0.1$; \textsuperscript{**}$p<0.05$; \textsuperscript{***}$p<0.01$
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\end{document}
